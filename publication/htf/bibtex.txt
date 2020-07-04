@@ -1,7 +1,7 @@
 @incollection{caoHMP2020,
   author = {Zhe Cao and
   Hang Gao and
-  Karttikeya Mangalam and
+  Shagun Uppal and
   Qizhi Cai and
   Minh Vo and
   Jitendra Malik},
