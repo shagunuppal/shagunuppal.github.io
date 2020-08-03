@@ -13,25 +13,19 @@
     
     
     <item>
-      <title>Disentangling Human Dynamics for Pedestrian Locomotion Forecasting with Noisy Supervision</title>
-      <link>https://shagunuppal.github.io/publication/plf/</link>
-      <pubDate>Tue, 03 Mar 2020 13:48:06 +0900</pubDate>
+      <title>Disentangling Multiple Features in Video Sequences using Gaussian Processes in Variational Autoencoders</title>
+      <link>https://shagunuppal.github.io/publication/MGP_VAE/</link>
+      <pubDate>August, 2020</pubDate>
       
-      <guid>https://shagunuppal.github.io/publication/plf/</guid>
-      <description>    Oral Presentation Video (WACV 2020)      Qualitative Results       Qualitative Results for overall locomotion forecasting in self-driving scenarios. Blue represents input locomotion to the network, Green is the predicted output locomotion. The network reasons jointly about path &amp;amp; pose for plausible future locomotion predictions. 
-
-Please cite using following bibtex: @inproceedings{mangalam2020disentangling, title={Disentangling human dynamics for pedestrian locomotion forecasting with noisy supervision}, author={Mangalam, Karttikeya and Adeli, Ehsan and Lee, Kuan-Hui and Gaidon, Adrien and Niebles, Juan Carlos}, booktitle={The IEEE Winter Conference on Applications of Computer Vision}, pages={2784--2793}, year={2020} }  </description>
-    </item>
-    
-    <item>
-      <title>It Is Not the Journey but the Destination: Endpoint Conditioned Trajectory Prediction</title>
-      <link>https://shagunuppal.github.io/publication/htf/</link>
-      <pubDate>Tue, 03 Mar 2020 13:48:06 +0900</pubDate>
-      
-      <guid>https://shagunuppal.github.io/publication/htf/</guid>
-      <description>    Oral Presentation Video (WACV 2020)      Qualitative Results       Qualitative Results for overall locomotion forecasting in self-driving scenarios. Blue represents input locomotion to the network, Green is the predicted output locomotion. The network reasons jointly about path &amp;amp; pose for plausible future locomotion predictions. 
-
-Please cite using following bibtex: @inproceedings{mangalam2020disentangling, title={Disentangling human dynamics for pedestrian locomotion forecasting with noisy supervision}, author={Mangalam, Karttikeya and Adeli, Ehsan and Lee, Kuan-Hui and Gaidon, Adrien and Niebles, Juan Carlos}, booktitle={The IEEE Winter Conference on Applications of Computer Vision}, pages={2784--2793}, year={2020} }  </description>
+      <guid>https://shagunuppal.github.io/publication/MGP_VAE/</guid>
+      <description> 
+Please cite using following bibtex: @article{Bhagat2020DisentanglingRU,
+  title={Disentangling Representations using Gaussian Processes in Variational Autoencoders for Video Prediction},
+  author={Sarthak Bhagat and Shagun Uppal and Vivian T. Yin and Nengli Lim},
+  journal={ArXiv},
+  year={2020},
+  volume={abs/2001.02408}
+}  </description>
     </item>
     
     <item>
