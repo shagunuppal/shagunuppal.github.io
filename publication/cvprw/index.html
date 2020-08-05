@@ -49,7 +49,7 @@
 
   
 
-  <title>DisCont: Self-Supervised Visual Attribute Disentanglement using Context Vectors | Shagun Uppal</title>
+  <title>A  weakly-supervised VAE setting for question generation using category consistent cyclic loss and structured latent space constraints. | Shagun Uppal</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
@@ -149,10 +149,10 @@
 
 
   <div class="container pub-title">
-    <h1 itemprop="name">DisCont: Self-Supervised Visual Attribute Disentanglement using Context Vectors</h1>
+    <h1 itemprop="name">A  weakly-supervised VAE setting for question generation using category consistent cyclic loss and structured latent space constraints.</h1>
     <span class="pub-authors" itemprop="author">
       
-      Shagun Uppal*, Sarthak Bhagat*, Vishaal Udandarao*      
+      Shagun Uppal*, Sarthak Bhagat*, Anish Madan*, Yi Yu, Rajiv Ratn Shah      
     </span>
     <span class="pull-right">
       
@@ -199,7 +199,7 @@
   
 
   <h3>Abstract</h3>
-  <p class="pub-abstract" itemprop="text">Disentangling the underlying feature attributes within an image with no prior supervision is a challenging task. Models that can disentangle attributes well provide greater interpretability and control. In this paper, we propose a self-supervised framework DisCont to disentangle multiple attributes by exploiting the structural inductive biases within images. Motivated by the recent surge in contrastive learning paradigms, our model bridges the gap between self-supervised contrastive learning algorithms and unsupervised disentanglement. We evaluate the efficacy of our approach, both qualitatively and quantitatively, on four benchmark datasets.</p>
+  <p class="pub-abstract" itemprop="text">Visual Question Generation (VQG) is the task of generating natural questions based on an image. Popular methods in the past have explored image-to-sequence architectures trained with maximum likelihood which have demonstrated meaningful generated questions given an image and its associated ground-truth answer. VQG becomes more challenging if the image contains rich context information describing its different semantic categories. In this paper, we try to exploit the different visual cues and concepts in an image to generate questions using a variational autoencoder (VAE) without ground-truth answers. Our approach solves two major shortcomings of existing VQG systems: (i) minimize the level of supervision and (ii) replace generic questions with category relevant generations. Most importantly, through eliminating expensive answer annotations, the required supervision is weakened. Using different categories enables us to exploit different concepts as the inference requires only the image and category. Mutual information is maximized between the image, question, and answer category in the latent space of our VAE. A novel category consistent cyclic loss is proposed to enable the model to generate consistent predictions with respect to the answer category, reducing its redundancies and irregularities. Additionally, we also impose supplementary constraints on the latent space of our generative model to provide structure based on categories and enhance generalization by encapsulating decorrelated features within each dimension. Through extensive experiments, the proposed C3VQG outperforms the state-of-the-art visual question generation methods with weak supervision.</p>
   
 
   <div class="row">
@@ -207,7 +207,7 @@
     <div class="col-sm-10">
       <div class="row">
         <div class="col-xs-12 col-sm-3 pub-row-heading">Publication</div>
-        <div class="col-xs-12 col-sm-9">Workshop on ML Interpretability for Scientific Discovery (ICML) 2020</div>
+        <div class="col-xs-12 col-sm-9">Workshop on Visual Question Answering (CVPR) 2020</div>
       </div>
     </div>
     <div class="col-sm-1"></div>
@@ -220,7 +220,7 @@
       <div class="row">
         <div class="col-xs-12 col-sm-3 pub-row-heading">Date</div>
         <div class="col-xs-12 col-sm-9" itemprop="datePublished">
-          July, 2020
+          June, 2020
         </div>
       </div>
     </div>
@@ -235,35 +235,30 @@
         <div class="col-xs-12 col-sm-3 pub-row-heading" style="line-height:34px;">Links</div>
         <div class="col-xs-12 col-sm-9">
 
-          
+
+<a class="btn btn-primary btn-outline" href="https://shagunuppal.github.io/publication/cvprw/">
+  Details
+</a>
 
 
-
-
-<a class="btn btn-primary btn-outline" href="https://arxiv.org/pdf/2006.05895.pdf">
+<a class="btn btn-primary btn-outline" href="https://arxiv.org/pdf/2005.07771.pdf">
   PDF
 </a>
 
 
-<a class="btn btn-primary btn-outline" href="https://shagunuppal.github.io/pdf/discont_slides.pdf">
+<a class="btn btn-primary btn-outline" href="https://shagunuppal.github.io/pdf/CVPR_VQG_Presentation">
   Slides
 </a>
 
 
-<a class="btn btn-primary btn-outline" href="https://www.youtube.com/watch?v=2gyLEPnTi1M&t=8s">
+<a class="btn btn-primary btn-outline" href="https://www.youtube.com/watch?v=SuTzKcIRGuw">
   Video
 </a>
 
-<a class="btn btn-primary btn-outline" href="https://github.com/shagunuppal/DisCont">
+
+<a class="btn btn-primary btn-outline" href="https://github.com/shagunuppal/c3vqg-official">
   Code
-</a>
-
-
-
-
-
-
-
+</a>          
 
         </div>
       </div>
@@ -278,12 +273,12 @@
 
 <h3 id="please-cite-using-following-bibtex">Please cite using following bibtex:</h3>
 
-<pre><code>@article{Bhagat2020DisContSV,
-  title={DisCont: Self-Supervised Visual Attribute Disentanglement using Context Vectors},
-  author={Sarthak Bhagat and Vishaal Udandarao and Shagun Uppal},
+<pre><code>@article{Uppal2020C3VQGCC,
+  title={C3VQG: Category Consistent Cyclic Visual Question Generation},
+  author={Shagun Uppal and Anish Madan and Sarthak Bhagat and Yi Yu and Rajiv Ratn Shah},
   journal={ArXiv},
   year={2020},
-  volume={abs/2006.05895}
+  volume={abs/2005.07771}
 }
 </code></pre>
 </div>
