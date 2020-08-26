@@ -293,39 +293,39 @@
 
 <h3> Style Transfer Results </h3><br>
 
-<img src="/img/mgp_vae_results/mnist_transfer.png" class="pub-banner" itemprop="image">
+<img src="/img/mgp_vae_results/mnist_transfer.png" class="pub-banner" itemprop="image"><br>
 <p style="font-size:11px" align="center">Results from swapping latent channels in Moving MNIST; channel 1 (fBM(H = 0.1)) captures digit identity; channel 2 (fBM(H = 0.9)) captures motion.</p>
 
-<img src="/img/mgp_vae_results/dsprites_transfer.png" class="pub-banner" itemprop="image">
-<p>Results from swapping latent channels in Coloured dSprites; channel 2 captures shape, channel 3 captures scale, channel 4 captures orientation and position, and channel 5 captures color.</p>
+<img src="/img/mgp_vae_results/dsprites_transfer.png" class="pub-banner" itemprop="image"><br>
+<p style="font-size:11px" align="center">Results from swapping latent channels in Coloured dSprites; channel 2 captures shape, channel 3 captures scale, channel 4 captures orientation and position, and channel 5 captures color.</p>
 
-<img src="/img/mgp_vae_results/sprites_transfer.png" class="pub-banner" itemprop="image"> 
-<p>Results from swapping latent channels in Sprites; channel 1 captures hair type, channel 2 captures armor type, channel 3 captures weapon type, and channel 4 captures body orientation.</p>
+<img src="/img/mgp_vae_results/sprites_transfer.png" class="pub-banner" itemprop="image"><br>
+<p style="font-size:11px" align="center">Results from swapping latent channels in Sprites; channel 1 captures hair type, channel 2 captures armor type, channel 3 captures weapon type, and channel 4 captures body orientation.</p><br><br>
 
-<h3> Geodesic Loss for Video Frame Prediction</h3>
+<h3> Geodesic Loss for Video Frame Prediction</h3><br>
 
 <p>For video prediction, we predict the last k frames of a sequence given the first n − k frames as input. To do so, we employ a simple three-layer MLP (16 units per layer) with ReLU activation which operates in latent space rather than on the actual frame data so as to best utilize the disentangled representations. The first n − k frames are first encoded by a pre-trained MGP-VAE into a sequence of points in latent space. These points are then used as input to the threelayer MLP to predict the next point, which is then passed through MGP-VAE’s decoder to generate the frame. This process is then repeated k − 1 more times.
-</p>
+</p><br>
 
-<img src="/img/mgp_vae_results/prediction_approach.png" class="pub-banner" itemprop="image"> 
-<p>Using the geodesic loss function as compared to squared-distance loss for prediction. By setting the target as z1 instead of z4, the model learns more efficiently to predict the next point.</p>
+<img src="/img/mgp_vae_results/prediction_approach.png" class="pub-banner" itemprop="image"><br>
+<p style="font-size:11px" align="center">Using the geodesic loss function as compared to squared-distance loss for prediction. By setting the target as z1 instead of z4, the model learns more efficiently to predict the next point.</p><br><br>
 
-<h3> Video Frame Prediction Results </h3>
+<h3> Video Frame Prediction Results </h3><br>
 
 <img src="/img/mgp_vae_results/mnist_prediction.png" class="pub-banner" itemprop="image">
-<p> 
+<p style="font-size:11px" align="center"> 
 Qualitative results of MGP-VAE and the baselines in the video prediction task for Moving MNIST Dataset. Predicted frames are marked in red, and the first row depicts the original video sequence.
-</p>
+</p><br>
 
 <img src="/img/mgp_vae_results/dsprites_prediction.png" class="pub-banner" itemprop="image"> 
-<p> 
+<p style="font-size:11px" align="center"> 
 Qualitative results of MGP-VAE and the baselines in the video prediction task for Colored dSprites Dataset. Predicted frames are marked in red, and the first row depicts the original video sequence.
-</p>
+</p><br>
 
 <img src="/img/mgp_vae_results/sprites_prediction.png" class="pub-banner" itemprop="image">
-<p> 
+<p style="font-size:11px" align="center"> 
 Qualitative results of MGP-VAE and the baselines in the video prediction task for Sprites Dataset. Predicted frames are marked in red, and the first row depicts the original video sequence.
-</p>
+</p><br>
 
 </div>
 
