@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.49" />
+  <meta name="author" content="Shagun Uppal">
+  <!-- <meta name="description" content="Research Assistant at SUTD"> -->
+
+  
+  <link rel="stylesheet" href="/css/highlight.min.css">
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.0/css/academicons.min.css" integrity="sha512-GGGNUPDhnG8LEAEDsjqYIQns+Gu8RBs4j5XGlxl7UfRaZBhCCm5jenJkeJL8uPuOXGqgl8/H1gjlWQDRjd3cUQ==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather%7CRoboto+Mono">
+  <link rel="stylesheet" href="/css/hugo-academic.css">
+  
+
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-163319156-1', 'auto');
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+
+  <link rel="alternate" href="https://shagunuppal.github.io/index.xml" type="application/rss+xml" title="Shagun Uppal">
+  <link rel="feed" href="https://shagunuppal.github.io/index.xml" type="application/rss+xml" title="Shagun Uppal">
+
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
+
+  <link rel="canonical" href="https://shagunuppal.github.io/publication/MGP_VAE/">
+
+  
+
+  <title>Disentangling Multiple Features in Video Sequences using Gaussian Processes in Variational Autoencoders | Shagun Uppal</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/#about">Shagun Uppal</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#publications_selected">
+            
+            <span>Publications</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#projects">
+            
+            <span>Projects</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#teaching">
+            
+            <span>Teaching</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+<div class="pub" itemscope itemtype="http://schema.org/CreativeWork">
+
+  
+
+
+  <div class="container pub-title">
+    <h1 itemprop="name">Disentangling Multiple Features in Video Sequences using Gaussian Processes in Variational Autoencoders</h1>
+    <span class="pub-authors" itemprop="author">
+      
+      Sarthak Bhagat*, Shagun Uppal*, Zhuyun Yin, Nengli Lim
+      
+    </span>
+    <span class="pull-right">
+      
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fshagunuppal.github.io%2fpublication%2fMGP_VAE%2f"
+         target="_blank">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Disentangling%20Multiple%20Features%20in%20Video%20Sequences%20using%20Gaussian%20Processes%20in%20Variational%20Autoencoders&amp;url=https%3a%2f%2fshagunuppal.github.io%2fpublication%2fMGP_VAE%2f"
+         target="_blank">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <!-- <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fshagunuppal.github.io%2fpublication%2fMGP_VAE%2f&amp;
+         title=Disentangling%20Multiple%20Features%20in%20Video%20Sequences%20using%20Gaussian%20Processes%20in%20Variational%20Autoencoders"
+         target="_blank">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li> -->
+    <!-- <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fshagunuppal.github.io%2fpublication%2fMGP_VAE%2f&amp;
+         title=Disentangling%20Multiple%20Features%20in%20Video%20Sequences%20using%20Gaussian%20Processes%20in%20Variational%20Autoencoders"
+         target="_blank">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li> -->
+    <li>
+      <a class="email"
+         href="mailto:?subject=Disentangling%20Multiple%20Features%20in%20Video%20Sequences%20using%20Gaussian%20Processes%20in%20Variational%20Autoencoders&amp;body=https%3a%2f%2fshagunuppal.github.io%2fpublication%2fMGP_VAE%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+    </span>
+  </div>
+
+</div>
+<div class="article-container">
+
+  
+
+  <h3>Abstract</h3><br>
+  <p class="pub-abstract" itemprop="text">We introduce MGP-VAE (Multi-disentangled-features Gaussian Processes Variational AutoEncoder), a variational autoencoder which uses Gaussian processes (GP) to model the latent space for the unsupervised learning of disentangled representations in video sequences. We improve upon previous work by establishing a framework by which multiple features, static or dynamic, can be disentangled. Specifically we use fractional Brownian motions (fBM) and Brownian bridges (BB) to enforce an inter-frame correlation structure in each independent channel, and show that varying this structure enables one to capture different factors of variation in the data. We demonstrate the quality of our representations with experiments on three publicly available datasets, and also quantify the improvement using a video prediction task. Moreover, we introduce a novel geodesic loss function which takes into account the curvature of the data manifold to improve learning. Our experiments show that the combination of the improved representations with the novel loss function enable MGP-VAE to outperform the baselines in video prediction.</p>
+
+  
+  <img src="/img/mgpvae_model.png" class="pub-banner" itemprop="image">
+
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+      <div class="row">
+        <div class="col-xs-12 col-sm-3 pub-row-heading">Publication</div>
+        <div class="col-xs-12 col-sm-9">European Conference on Computer Vision (ECCV), 2020</div>
+      </div>
+    </div>
+    <div class="col-sm-1"></div>
+  </div>
+  <div class="visible-xs space-below"></div>
+
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+      <div class="row">
+        <div class="col-xs-12 col-sm-3 pub-row-heading">Date</div>
+        <div class="col-xs-12 col-sm-9" itemprop="datePublished">
+          August, 2020
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-1"></div>
+  </div>
+  <div class="visible-xs space-below"></div>
+
+  <div class="row" style="padding-top: 10px">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+      <div class="row">
+        <div class="col-xs-12 col-sm-3 pub-row-heading" style="line-height:34px;">Links</div>
+        <div class="col-xs-12 col-sm-9">
+
+          
+
+
+
+
+<a class="btn btn-primary btn-outline" href="https://arxiv.org/pdf/2001.02408.pdf">
+  PDF
+</a>
+
+
+<a class="btn btn-primary btn-outline" href="https://shagunuppal.github.io/pdf/mgpvae_supp">
+  Supplementary
+</a>
+
+
+<a class="btn btn-primary btn-outline" href="https://shagunuppal.github.io/pdf/MGP_VAE.pdf">
+  Slides
+</a>
+
+
+<a class="btn btn-primary btn-outline" href="https://youtu.be/35aGG1iZ_Vc">
+  Video
+</a>
+
+<a class="btn btn-primary btn-outline" href="https://github.com/SUTDBrainLab/MGP-VAE">
+  Code
+</a>
+
+
+
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-1"></div>
+  </div>
+  <div class="visible-xs space-below"></div>
+
+  <div class="space-below"></div>
+
+  <div class="article-style">
+
+<h3 id="please-cite-using-following-bibtex">Please cite using following bibtex:</h3>
+
+<pre><code>@article{Bhagat2020DisentanglingRU,
+  title={Disentangling Representations using Gaussian Processes in Variational Autoencoders for Video Prediction},
+  author={Sarthak Bhagat and Shagun Uppal and Vivian T. Yin and Nengli Lim},
+  journal={ArXiv},
+  year={2020},
+  volume={abs/2001.02408}
+}
+</code></pre>
+</div>
+
+<br>
+
+<h3> Style Transfer Results </h3><br>
+
+<img src="/img/mgp_vae_results/mnist_transfer.png" class="pub-banner" itemprop="image">
+<p style="font-size:12px" align="center">Results from swapping latent channels in Moving MNIST; channel 1 (fBM(H = 0.1)) captures digit identity; channel 2 (fBM(H = 0.9)) captures motion.</p><br>
+
+<img src="/img/mgp_vae_results/dsprites_transfer.png" class="pub-banner" itemprop="image">
+<p style="font-size:12px" align="center">Results from swapping latent channels in Coloured dSprites; channel 2 captures shape, channel 3 captures scale, channel 4 captures orientation and position, and channel 5 captures color.</p><br>
+
+<img src="/img/mgp_vae_results/sprites_transfer.png" class="pub-banner" itemprop="image">
+<p style="font-size:12px" align="center">Results from swapping latent channels in Sprites; channel 1 captures hair type, channel 2 captures armor type, channel 3 captures weapon type, and channel 4 captures body orientation.</p><br><br>
+
+<h3> Geodesic Loss for Video Frame Prediction</h3><br>
+
+<p>For video prediction, we predict the last k frames of a sequence given the first n − k frames as input. To do so, we employ a simple three-layer MLP (16 units per layer) with ReLU activation which operates in latent space rather than on the actual frame data so as to best utilize the disentangled representations. The first n − k frames are first encoded by a pre-trained MGP-VAE into a sequence of points in latent space. These points are then used as input to the threelayer MLP to predict the next point, which is then passed through MGP-VAE’s decoder to generate the frame. This process is then repeated k − 1 more times.
+</p><br>
+
+<img src="/img/mgp_vae_results/prediction_approach.png" class="pub-banner" itemprop="image">
+<p style="font-size:12px" align="center">Using the geodesic loss function as compared to squared-distance loss for prediction. By setting the target as z1 instead of z4, the model learns more efficiently to predict the next point.</p><br><br>
+
+<img src="/img/mgp_vae_results/geodesic_without.png" class="pub-banner" itemprop="image">
+<p style="font-size:12px" align="center">Predictions without using the geodesic loss function for Moving MNIST. The red boxes illustrate the target frame (top row) and predicted frame (bottom row).</p><br>
+
+<img src="/img/mgp_vae_results/geodesic_with.png" class="pub-banner" itemprop="image">
+<p style="font-size:12px" align="center">Predictions with using the geodesic loss function for Moving MNIST. The red boxes illustrate the target frame (top row) and predicted frame (bottom row).</p><br><br>
+
+<h3> Video Frame Prediction Results </h3><br>
+
+<img src="/img/mgp_vae_results/mnist_prediction.png" class="pub-banner" itemprop="image">
+<p style="font-size:12px" align="center"> 
+Qualitative results of MGP-VAE and the baselines in the video prediction task for Moving MNIST Dataset. Predicted frames are marked in red, and the first row depicts the original video sequence.
+</p><br>
+
+<img src="/img/mgp_vae_results/dsprites_prediction.png" class="pub-banner" itemprop="image"> 
+<p style="font-size:12px" align="center"> 
+Qualitative results of MGP-VAE and the baselines in the video prediction task for Colored dSprites Dataset. Predicted frames are marked in red, and the first row depicts the original video sequence.
+</p><br>
+
+<img src="/img/mgp_vae_results/sprites_prediction.png" class="pub-banner" itemprop="image">
+<p style="font-size:12px" align="center"> 
+Qualitative results of MGP-VAE and the baselines in the video prediction task for Sprites Dataset. Predicted frames are marked in red, and the first row depicts the original video sequence.
+</p><br>
+
+</div>
+
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2020 Shagun Uppal &middot; 
+
+      Powered by the <a href="https://github.com/gcushen/hugo-academic" target="_blank">Academic
+      theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js" integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.2/imagesloaded.pkgd.min.js" integrity="sha512-iHzEu7GbSc705hE2skyH6/AlTpOfBmkx7nUqTLGzPYR+C1tRaItbRlJ7hT/D3YQ9SV0fqLKzp4XY9wKulTBGTw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js" integrity="sha512-Z5heTz36xTemt1TbtbfXtTq5lMfYnOkXM2/eWcTTiLU01+Sw4ku1i7vScDc8fWhrP2abz9GQzgKH5NGBLoYlAw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/ScrollToPlugin.min.js" integrity="sha512-CDeU7pRtkPX6XJtF/gcFWlEwyaX7mcAp5sO3VIu/ylsdR74wEw4wmBpD5yYTrmMAiAboi9thyBUr1vXRPA7t0Q==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+
+  </body>
+</html>
+
