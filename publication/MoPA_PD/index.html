@@ -246,9 +246,6 @@
         <div class="col-xs-12 col-sm-3 pub-row-heading" style="line-height:34px;">Links</div>
         <div class="col-xs-12 col-sm-9">
 
-          
-
-
 
 
 <a class="btn btn-primary btn-outline" href="https://openreview.net/pdf?id=NZnz3cExrDW">
@@ -260,20 +257,13 @@
   Poster
 </a>
 
-
-<a class="btn btn-primary btn-outline" href="https://shagunuppal.github.io/pdf/MGP_VAE.pdf">
-  Slides
-</a>
-
-
-<a class="btn btn-primary btn-outline" href="https://youtu.be/35aGG1iZ_Vc">
+<a class="btn btn-primary btn-outline" href="https://youtu.be/0qrW1Zupvuk">
   Video
 </a>
 
 <a class="btn btn-primary btn-outline" href="https://github.com/clvrai/mopa-pd">
   Code
 </a>
-
 
 
         </div>
@@ -289,61 +279,18 @@
 
 <h3 id="please-cite-using-following-bibtex">Please cite using following bibtex:</h3>
 
-<pre><code>@article{Bhagat2020DisentanglingRU,
-  title={Disentangling Representations using Gaussian Processes in Variational Autoencoders for Video Prediction},
-  author={Sarthak Bhagat and Shagun Uppal and Vivian T. Yin and Nengli Lim},
-  journal={ArXiv},
-  year={2020},
-  volume={abs/2001.02408}
+<pre><code>@inproceedings{liu2021mopa,
+  title={Distilling Motion Planner Augmented Policies into Visual Control Policies for Robot Manipulation},
+  author={I-Chun Arthur Liu and Shagun Uppal and Gaurav S. Sukhatme and Joseph J. Lim and Peter Englert and Youngwoon Lee},
+  booktitle={Conference on Robot Learning},
+  year={2021}
 }
 </code></pre>
 </div>
 
 <br>
 
-<h3> Style Transfer Results </h3><br>
 
-<img src="/img/mgp_vae_results/mnist_transfer.png" class="pub-banner" itemprop="image">
-<p style="font-size:12px" align="center">Results from swapping latent channels in Moving MNIST; channel 1 (fBM(H = 0.1)) captures digit identity; channel 2 (fBM(H = 0.9)) captures motion.</p><br>
-
-<img src="/img/mgp_vae_results/dsprites_transfer.png" class="pub-banner" itemprop="image">
-<p style="font-size:12px" align="center">Results from swapping latent channels in Coloured dSprites; channel 2 captures shape, channel 3 captures scale, channel 4 captures orientation and position, and channel 5 captures color.</p><br>
-
-<img src="/img/mgp_vae_results/sprites_transfer.png" class="pub-banner" itemprop="image">
-<p style="font-size:12px" align="center">Results from swapping latent channels in Sprites; channel 1 captures hair type, channel 2 captures armor type, channel 3 captures weapon type, and channel 4 captures body orientation.</p><br><br>
-
-<h3> Geodesic Loss for Video Frame Prediction</h3><br>
-
-<p>For video prediction, we predict the last k frames of a sequence given the first n − k frames as input. To do so, we employ a simple three-layer MLP (16 units per layer) with ReLU activation which operates in latent space rather than on the actual frame data so as to best utilize the disentangled representations. The first n − k frames are first encoded by a pre-trained MGP-VAE into a sequence of points in latent space. These points are then used as input to the threelayer MLP to predict the next point, which is then passed through MGP-VAE’s decoder to generate the frame. This process is then repeated k − 1 more times.
-</p><br>
-
-<img src="/img/mgp_vae_results/prediction_approach.png" class="pub-banner" itemprop="image">
-<p style="font-size:12px" align="center">Using the geodesic loss function as compared to squared-distance loss for prediction. By setting the target as z1 instead of z4, the model learns more efficiently to predict the next point.</p><br><br>
-
-<img src="/img/mgp_vae_results/geodesic_without.png" class="pub-banner" itemprop="image">
-<p style="font-size:12px" align="center">Predictions without using the geodesic loss function for Moving MNIST. The red boxes illustrate the target frame (top row) and predicted frame (bottom row).</p><br>
-
-<img src="/img/mgp_vae_results/geodesic_with.png" class="pub-banner" itemprop="image">
-<p style="font-size:12px" align="center">Predictions with using the geodesic loss function for Moving MNIST. The red boxes illustrate the target frame (top row) and predicted frame (bottom row).</p><br><br>
-
-<h3> Video Frame Prediction Results </h3><br>
-
-<img src="/img/mgp_vae_results/mnist_prediction.png" class="pub-banner" itemprop="image">
-<p style="font-size:12px" align="center"> 
-Qualitative results of MGP-VAE and the baselines in the video prediction task for Moving MNIST Dataset. Predicted frames are marked in red, and the first row depicts the original video sequence.
-</p><br>
-
-<img src="/img/mgp_vae_results/dsprites_prediction.png" class="pub-banner" itemprop="image"> 
-<p style="font-size:12px" align="center"> 
-Qualitative results of MGP-VAE and the baselines in the video prediction task for Colored dSprites Dataset. Predicted frames are marked in red, and the first row depicts the original video sequence.
-</p><br>
-
-<img src="/img/mgp_vae_results/sprites_prediction.png" class="pub-banner" itemprop="image">
-<p style="font-size:12px" align="center"> 
-Qualitative results of MGP-VAE and the baselines in the video prediction task for Sprites Dataset. Predicted frames are marked in red, and the first row depicts the original video sequence.
-</p><br>
-
-</div>
 
 
 <footer class="site-footer">
