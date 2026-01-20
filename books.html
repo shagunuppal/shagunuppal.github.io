@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Shagun Uppal - Reads</title>
+    <meta name="author" content="Shagun Uppal">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      nav a:hover {
+        color: #f09228 !important;
+      }
+      .fixed-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: white;
+        z-index: 1000;
+        border-bottom: 1px solid #e0e0e0;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+      .fixed-header-content {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px 0 10px 0;
+      }
+      .page-content {
+        margin-top: 100px;
+      }
+      .books-container {
+        column-count: 2;
+        column-gap: 10px;
+        margin-top: 20px;
+      }
+      .book-item {
+        position: relative;
+        overflow: visible;
+        border-radius: 4px;
+        background-color: transparent;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        padding: 0;
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 10px;
+        break-inside: avoid;
+        page-break-inside: avoid;
+        -webkit-column-break-inside: avoid;
+      }
+      .book-item:hover {
+        transform: scale(1.02);
+      }
+      .book-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 4px;
+      }
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .books-container {
+          column-count: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="fixed-header">
+      <div class="fixed-header-content">
+        <p class="name" style="text-align: center; margin: 0; padding-bottom: 10px;">Shagun Uppal</p>
+        <nav style="text-align:center;">
+          <a href="index.html" style="padding:0 15px;text-decoration:none;color:#1772d0;font-weight:normal;">Home</a>
+          <span style="color:#ccc;">|</span>
+          <a href="research.html" style="padding:0 15px;text-decoration:none;color:#1772d0;font-weight:normal;">Research</a>
+          <span style="color:#ccc;">|</span>
+          <a href="misc.html" style="padding:0 15px;text-decoration:none;color:#1772d0;font-weight:normal;">Misc.</a>
+          <!-- <span style="color:#ccc;">|</span>
+          <a href="poetry.html" style="padding:0 15px;text-decoration:none;color:#1772d0;font-weight:normal;">Poetry</a> -->
+          <span style="color:#ccc;">|</span>
+          <a href="100things.html" style="padding:0 15px;text-decoration:none;color:#1772d0;font-weight:normal;">100!Things</a>
+          <span style="color:#ccc;">|</span>
+          <a href="art.html" style="padding:0 15px;text-decoration:none;color:#1772d0;font-weight:normal;">Art</a>
+          <span style="color:#ccc;">|</span>
+          <a href="books.html" style="padding:0 15px;text-decoration:none;color:#1772d0;font-weight:normal;">Reads</a>
+        </nav>
+      </div>
+    </div>
+    <div class="page-content">
+    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+      <tr style="padding:0px">
+        <td style="padding:0px">
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:16px;width:100%;vertical-align:middle">
+                <br><br><br>
+                <h2>Reads</h2>
+                <p>
+                  An extremely mixed snippet of my reading archive (lots to catch up on!).
+                </p>
+                <div class="books-container">
+                  <div class="book-item">
+                    <img src="books/books_1.jpg" alt="Book 1">
+                  </div>
+                  <div class="book-item">
+                    <img src="books/books_2.jpg" alt="Book 2">
+                  </div>
+                  <div class="book-item">
+                    <img src="books/books_3.jpg" alt="Book 3">
+                  </div>
+                  <div class="book-item">
+                    <img src="books/books_4.jpg" alt="Book 4">
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody></table>
+        </td>
+      </tr>
+    </table>
+    </div>
+  </body>
+</html>
+

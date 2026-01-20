@@ -1,0 +1,388 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Shagun Uppal - 100!Things</title>
+    <meta name="author" content="Shagun Uppal">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      nav a:hover {
+        color: #f09228 !important;
+      }
+      .fixed-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: white;
+        z-index: 1000;
+        border-bottom: 1px solid #e0e0e0;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+      .fixed-header-content {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px 0 10px 0;
+      }
+      .page-content {
+        margin-top: 100px;
+      }
+      .checkmark {
+        color: #28a745;
+        font-size: 18px;
+        margin-left: 4px;
+        display: inline-block;
+        font-weight: bold;
+      }
+      .checkmark::before {
+        content: '✓';
+      }
+      ol li {
+        margin-bottom: 8px;
+      }
+      .photo-icon {
+        display: inline-block;
+        margin-left: 8px;
+        cursor: pointer;
+        color: #1772d0;
+        font-size: 16px;
+        opacity: 0.7;
+        transition: opacity 0.2s;
+        user-select: none;
+        -webkit-user-select: none;
+        vertical-align: baseline;
+        line-height: 1;
+      }
+      .photo-icon:hover {
+        opacity: 1;
+      }
+      .photo-icon * {
+        pointer-events: none;
+      }
+      .photo-icon svg {
+        width: 100%;
+        height: 100%;
+        fill: currentColor;
+      }
+      /* Modal styles */
+      .photo-modal {
+        display: none;
+        position: fixed;
+        z-index: 2000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        cursor: pointer;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+      .photo-modal.active {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .photo-modal-content {
+        max-width: 90vw;
+        max-height: 90vh;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        border: 3px solid white;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        cursor: default;
+        display: block;
+        margin: auto;
+      }
+      .photo-modal-content[src=""] {
+        opacity: 0;
+      }
+      .photo-modal-content[src]:not([src=""]) {
+        opacity: 1;
+      }
+      .photo-modal-wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 90vw;
+        max-height: 90vh;
+      }
+      .photo-modal-caption {
+        margin-top: 4px;
+        color: white;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 10px 20px;
+        border-radius: 4px;
+        max-width: 90%;
+        font-size: 14px;
+        line-height: 1.4;
+        display: none;
+      }
+      .photo-modal-close {
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        color: white;
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 2001;
+      }
+      .photo-modal-close:hover {
+        color: #f09228;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="fixed-header">
+      <div class="fixed-header-content">
+        <p class="name" style="text-align: center; margin: 0; padding-bottom: 10px;">Shagun Uppal</p>
+        <nav style="text-align:center;">
+          <a href="index.html" style="padding:0 15px;text-decoration:none;color:#1772d0;font-weight:normal;">Home</a>
+          <span style="color:#ccc;">|</span>
+          <a href="research.html" style="padding:0 15px;text-decoration:none;color:#1772d0;font-weight:normal;">Research</a>
+          <span style="color:#ccc;">|</span>
+          <a href="misc.html" style="padding:0 15px;text-decoration:none;color:#1772d0;font-weight:normal;">Misc.</a>
+          <!-- <span style="color:#ccc;">|</span> -->
+          <!-- <a href="poetry.html" style="padding:0 15px;text-decoration:none;color:#1772d0;font-weight:normal;">Poetry</a> -->
+          <span style="color:#ccc;">|</span>
+          <a href="100things.html" style="padding:0 15px;text-decoration:none;color:#1772d0;font-weight:normal;">100!Things</a>
+          <span style="color:#ccc;">|</span>
+          <a href="art.html" style="padding:0 15px;text-decoration:none;color:#1772d0;font-weight:normal;">Art</a>
+          <span style="color:#ccc;">|</span>
+          <a href="books.html" style="padding:0 15px;text-decoration:none;color:#1772d0;font-weight:normal;">Reads</a>
+        </nav>
+      </div>
+    </div>
+    <div class="page-content">
+    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+      <tr style="padding:0px">
+        <td style="padding:0px">
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:16px;width:100%;vertical-align:middle">
+                <br><br><br>
+                <h2>100 Things</h2>
+                <p>
+                  My own list of 100 things (in no paraticular order) I want to do before I die, inspired by <a href="https://huyenchip.com/list-100/">Chip Huyen</a>.
+                  <br><br>
+                  <em>P.S. While jotting this down, I realized some of my childhood dreams were already fulfilled. I move forward to accomplish them all with a lot of gratitude and love.</em>
+
+                <ol>
+                  <li>Travel to all seven continents</li>
+                  <li>See the Northern Lights<span class="checkmark"></span> (serendipitously, still needs a dedicated trip!)<span class="photo-icon" data-photo="100things/northern_lights.jpg" data-caption="Somewhere in Pennsylvania during Skild retreat (2024)" title="View photo">📷</span></li> 
+                  <li>Learn to play a musical instrument "properly :')"</li>
+                  <li>Write a book</li>
+                  <li>Live in a different country<span class="checkmark"></span></li>
+                  <li>Go scuba diving</li>
+                  <li>Go whale watching / see a superpod of dolphins<span class="checkmark"></span><span class="photo-icon" data-photo="100things/dolphins_whale.jpg" data-caption="Humbback whale and a superpod of dolphins, Channel Islands, Nov, 2025" title="View photo">📷</span></li></li>
+                  <li>Go skydiving</li>
+                  <li>Road trip across the US<span class="checkmark"></span></li>
+                  <li>Start a company</li>
+                  <li>A non-profit for education</li>
+                  <li>Take a hot air balloon ride</li>
+                  <li>Witness a rocket launch</li>
+                  <li>Go on a safari in Africa</li>
+                  <li>See cherry blossoms in Japan</li>
+                  <li>Visit Antarctica</li>
+                  <li>Ride in a helicopter</li>
+                  <li>Learn to fly a plane</li>
+                  <li>Experience zero-gravity (Vomit Comet counts too!)</li>
+                  <li>Experience a total solar eclipse<span class="checkmark"></span></li>
+                  <li>Go camping in the wild</li>
+                  <li>Adopt a pet</li>
+                  <li>See an active volcano erupting</li>
+                  <li>Recite my poetry at an art festival</li>
+                  <li>Sleep under the stars<span class="checkmark"></span></li>
+                  <li>Witness bioluminescence in nature</li>
+                  <li>Space travel</li>
+                  <li>Swim in the ocean (cliff diving is a plus!)</li>
+                  <li>Meet one on one with an astronaut</li>
+                  <li>Watching Lionel Messi play live together with my brother.<span class="checkmark"></span><span class="photo-icon" data-photo="100things/messi.jpg" data-caption="Argentina (1) vs Chile (0) - Copa America 2024, New Jersey" title="View photo">📷</span></li>
+                  <li>Publish a first authored paper at a top-tier conference <em>[CVPR 2024]</em><span class="checkmark"></span></li>
+                  <li>Foreign intership in undergrad <em>[Singapore, 2019]</em><span class="checkmark"></span><span class="photo-icon" data-photo="100things/Singapore.jpg" data-caption="The best evidence I could find in my camera roll", title="View photo">📷</span></li>
+                  <li>Get featured in a newspaper <em>[with my artwork, 2008 :')]</em><span class="checkmark"></span></li>
+                  <li>Watch a meteor shower at its peak <em>[Geminids, December 2023]</em><span class="checkmark"></span></li>
+                  <li>See a comet <em>[Tsuchinshan-ATLAS, October 2024]</em><span class="checkmark"></span></li>
+                  <li>Watch a broadway show in New York<span class="checkmark"></span><span class="photo-icon" data-photo="100things/broadway.jpg" data-caption="Second broadway show in New York, February 2025" title="View photo">📷</span></li>
+                  <li>Self-sponsor my first international trip <em>[Google I/O, California, 2019]</em><span class="checkmark"></span></li>
+                  <li>Live independently and learn to drive a car<span class="checkmark"></span></li>
+                  <li>Eat at a Michelin star restaurant<span class="checkmark"></span></li>
+                  <li>Go on a trip overseas with my family</li>
+                  <li>Become a barista, for atleast a day</li>
+                  <li>See one of the biggest (radio) telescopes in the world<span class="checkmark"></span></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ol>
+                </p>
+              </td>
+            </tr>
+          </tbody></table>
+        </td>
+      </tr>
+    </table>
+    </div>
+    
+    <!-- Photo Modal -->
+    <div id="photoModal" class="photo-modal">
+      <span class="photo-modal-close">&times;</span>
+      <div class="photo-modal-wrapper">
+        <img class="photo-modal-content" id="modalImage" src="" alt="Photo">
+        <div class="photo-modal-caption" id="modalCaption"></div>
+      </div>
+    </div>
+    
+    <script>
+      // Get modal elements
+      const modal = document.getElementById('photoModal');
+      const modalImg = document.getElementById('modalImage');
+      const modalCaption = document.getElementById('modalCaption');
+      const closeBtn = document.querySelector('.photo-modal-close');
+      
+      // Open modal when photo icon is clicked
+      document.addEventListener('click', function(e) {
+        // Check if click is on photo icon or its parent
+        const photoIcon = e.target.closest('.photo-icon');
+        
+        if (photoIcon) {
+          e.preventDefault();
+          e.stopPropagation();
+          const imgSrc = photoIcon.getAttribute('data-photo');
+          console.log('Photo icon clicked, image source:', imgSrc); // Debug
+          
+          if (imgSrc && imgSrc.trim() !== '') {
+            // Show modal first
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            
+            // Clear previous image and load new one
+            modalImg.src = '';
+            modalImg.alt = photoIcon.getAttribute('title') || 'Photo';
+            
+            // Set image source and caption
+            setTimeout(function() {
+              modalImg.src = imgSrc;
+              console.log('Setting image src to:', imgSrc); // Debug
+              
+              // Get and display caption if available
+              const caption = photoIcon.getAttribute('data-caption');
+              if (caption) {
+                modalCaption.textContent = caption;
+                modalCaption.style.display = 'block';
+              } else {
+                modalCaption.textContent = '';
+                modalCaption.style.display = 'none';
+              }
+            }, 10);
+            
+            // Handle image load error
+            modalImg.onerror = function() {
+              console.error('Failed to load image:', imgSrc);
+            };
+            
+            // Handle successful image load
+            modalImg.onload = function() {
+              console.log('Image loaded successfully:', imgSrc);
+            };
+          } else {
+            console.warn('No image source found in data-photo attribute');
+          }
+        }
+      });
+      
+      // Close modal
+      function closeModal() {
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto'; // Restore scrolling
+      }
+      
+      closeBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        closeModal();
+      });
+      modal.addEventListener('click', function(e) {
+        if (e.target === modal || e.target.classList.contains('photo-modal')) {
+          closeModal();
+        }
+      });
+      // Prevent closing when clicking on the image itself
+      modalImg.addEventListener('click', function(e) {
+        e.stopPropagation();
+      });
+      
+      // Close on Escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+          closeModal();
+        }
+      });
+    </script>
+  </body>
+</html>
+
