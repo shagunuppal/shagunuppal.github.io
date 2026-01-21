@@ -28,10 +28,11 @@
         width: 100%;
         max-width: 800px;
         margin: 0 auto;
-        padding: 20px 0 10px 0;
+        padding: 20px 15px 10px 15px;
       }
       .page-content {
         margin-top: 100px;
+        padding: 0 15px;
       }
       .collage-container {
         column-count: 3;
@@ -70,13 +71,54 @@
       }
       /* Responsive adjustments */
       @media (max-width: 768px) {
+        .fixed-header-content {
+          padding: 15px 10px 8px 10px;
+        }
+        .page-content {
+          margin-top: 80px;
+          padding: 0 10px;
+        }
         .collage-container {
           column-count: 2;
+          column-gap: 8px;
+        }
+        nav a {
+          padding: 0 8px !important;
+          font-size: 0.9em;
+        }
+        nav span {
+          padding: 0 2px;
         }
       }
       @media (max-width: 480px) {
+        .fixed-header-content {
+          padding: 12px 8px 6px 8px;
+        }
+        .page-content {
+          margin-top: 70px;
+          padding: 0 8px;
+        }
         .collage-container {
           column-count: 1;
+          column-gap: 6px;
+        }
+        nav {
+          font-size: 0.85em;
+        }
+        nav a {
+          padding: 0 5px !important;
+        }
+        nav span {
+          padding: 0 1px;
+        }
+        .name {
+          font-size: 0.95em;
+        }
+        table {
+          width: 100% !important;
+        }
+        td {
+          padding: 12px 8px !important;
         }
       }
     </style>
