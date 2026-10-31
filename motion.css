@@ -1,0 +1,50 @@
+/* Motion follows the content; no continuous animation or hidden content. */
+@media (prefers-reduced-motion: no-preference) {
+  .header nav a { transition: color 160ms ease, border-color 160ms ease; }
+  .profile-links a { transition: color 160ms ease, border-color 160ms ease; }
+  .profile-links a:hover { color: var(--warp); border-color: var(--warp); }
+  .motion-underline { position: relative; display: inline-block; }
+  .motion-underline::after { content: ''; position: absolute; left: 0; right: 0; bottom: -.08em; height: 1px; background: currentColor; opacity: .65; transform-origin: left; animation: pen-mark 500ms cubic-bezier(.2,.7,.25,1) 220ms backwards; }
+  @keyframes pen-mark { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  .page-research .paper-media { transition: transform 220ms ease; }
+  .page-research .paper:hover .paper-media { transform: translateY(-3px); }
+  .page-art .gallery-piece img { transition: transform 240ms ease, box-shadow 240ms ease; }
+  .page-art .gallery-piece:hover img { transform: translateY(-4px) rotate(.35deg); box-shadow: 6px 9px 0 var(--soft); }
+  .reading-layout .shelf-cover { transform-origin: left center; transition: transform 220ms ease, box-shadow 220ms ease; }
+  .reading-layout .shelf-book:hover .shelf-cover { transform: perspective(500px) rotateY(-9deg) translateY(-3px); box-shadow: 5px 7px 12px #0004; }
+  .page-misc .news time { position: relative; }
+  .page-misc .news .motion-arrived time::before { content: ''; position: absolute; left: -10px; top: .65em; width: 4px; height: 4px; background: var(--warp); border-radius: 50%; animation: milestone-dot 400ms ease-out; }
+  @keyframes milestone-dot { from { opacity: 0; transform: scale(.2); } to { opacity: 1; transform: scale(1); } }
+  .page-content .photo-icon { display: inline-block; transition: transform 180ms ease; }
+  .page-content .photo-icon:hover { transform: translateY(-2px) rotate(-6deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+/* Small animated signatures beside each main page title. */
+.page-motion{display:inline-block;width:76px;height:49px;vertical-align:middle;margin-left:18px;stroke:var(--muted);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;overflow:visible}
+.page-motion .motion-accent{fill:var(--warp);stroke:var(--warp)}
+.page-motion .paint-line,.page-motion .book-turn{stroke:var(--warp)}
+.page-motion .book-turn{fill:var(--paper);transform-origin:44px 32px}
+.page-index .personal-name .page-motion{width:69px;margin-left:14px}
+@media(prefers-reduced-motion:no-preference){
+ .robot-gaze{animation:robot-look 5s ease-in-out infinite}
+ @keyframes robot-look{0%,15%,100%{transform:translateX(0)}35%,55%{transform:translateX(4px)}75%,85%{transform:translateX(-3px)}}
+ .paint-line{stroke-dasharray:100;stroke-dashoffset:0;animation:paint-stroke 5s ease-in-out infinite}
+ @keyframes paint-stroke{0%,10%{stroke-dashoffset:100;opacity:.2}60%,88%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:.2}}
+ .paint-brush{animation:brush-dip 5s ease-in-out infinite;transform-origin:60px 18px}
+ @keyframes brush-dip{0%,100%{transform:rotate(0)}35%{transform:translate(-3px,3px) rotate(-9deg)}65%{transform:translate(2px,-2px) rotate(5deg)}}
+ .book-turn{animation:page-turn 5s ease-in-out infinite}
+ @keyframes page-turn{0%,18%,100%{transform:scaleX(1);opacity:1}48%,58%{transform:scaleX(-1);opacity:.7}80%{transform:scaleX(1);opacity:1}}
+ .research-signal,.timeline-signal{animation:signal-step 3.6s ease-in-out infinite}
+ .research-signal:nth-of-type(5),.timeline-signal:nth-of-type(5){animation-delay:1.2s}
+ .research-signal:nth-of-type(6),.timeline-signal:nth-of-type(6){animation-delay:2.4s}
+ @keyframes signal-step{0%,65%,100%{opacity:.15}25%,40%{opacity:1}}
+}
+@media(max-width:560px){.page-motion{width:60px;height:39px;margin-left:12px}.page-index .personal-name .page-motion{display:block;width:53px;height:34px;margin:10px 0 0}}
+
+/* Use a hand cursor over page text. */
+body{cursor:pointer}
+input,textarea,[contenteditable="true"]{cursor:text}

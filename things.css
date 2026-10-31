@@ -1,0 +1,80 @@
+.page-things .page-intro a{color:var(--accent);border-bottom:1px solid var(--line)}
+.things-dashboard{margin:32px 0 0;max-width:670px;padding:22px 0 0;border-top:1px solid var(--line)}
+.things-progress-heading{display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+.page-things .page-intro .things-progress{font-size:14px;color:var(--ink);margin:0;line-height:1.5}
+.things-progress strong{font-size:30px;font-weight:600;color:var(--warp);letter-spacing:-1px;margin-right:3px}
+.things-progress span,.things-open-space{font-size:12px;color:var(--muted)}
+.things-dots{display:grid;grid-template-columns:repeat(21,minmax(0,1fr));gap:5px;margin:17px 0 12px}
+.things-dots span{height:8px;background:var(--line);border-radius:3px}
+.things-dots .is-done{background:var(--warp)}
+.things-dots .is-done:last-of-type{animation:things-glimmer 4s ease-in-out infinite}
+.page-things .page-intro .things-progress-note{font-size:11px;color:var(--muted);margin:0;letter-spacing:.02em}
+.things-controls{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:0 0 22px;flex-wrap:wrap}
+.things-filters{display:flex;gap:4px;flex-wrap:wrap}
+.things-controls button,.things-pick-close{font:inherit;font-size:12px;background:transparent;border:1px solid transparent;color:var(--muted);padding:8px 12px;border-radius:5px;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.things-filters button[aria-pressed="true"]{border-color:var(--line);color:var(--heading);background:var(--soft)}
+.things-filters span{font-size:10px;color:var(--muted);margin-left:6px}
+.things-controls .things-surprise{border-color:var(--line);color:var(--heading)}
+.things-surprise span{display:inline-block;color:var(--warp);font-size:16px;margin-right:5px;transition:transform .2s}
+.things-surprise:hover span{transform:translate(2px,-2px)}
+.things-controls button:hover{color:var(--warp);border-color:var(--warp)}
+.things-pick{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;padding:19px 22px;margin:0 0 24px;background:var(--soft);border-left:2px solid var(--warp);border-radius:0 6px 6px 0}
+.things-pick-label{font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:var(--warp)}
+.things-pick .things-pick-text{font-size:17px;line-height:1.6;margin:7px 0 0;color:var(--heading)}
+.things-pick-close{font-size:22px;padding:0 5px;line-height:1.2}
+.things-list{list-style:none;counter-reset:things;columns:2;column-gap:55px;margin:0;padding:0 0 25px;border-top:1px solid var(--line)}
+.things-list li{counter-increment:things;break-inside:avoid;position:relative;padding:17px 8px 17px 38px;border-bottom:1px solid var(--line);font-size:13px;line-height:1.85;transition:background .2s}
+.things-list li:hover{background:var(--soft)}
+.things-list li::before{content:attr(data-number);position:absolute;left:0;top:20px;font:10px monospace;color:var(--muted)}
+.things-list li:not([data-number])::before{content:counter(things,decimal-leading-zero)}
+.things-list .thing-done::before{color:var(--warp)}
+.checkmark{font-size:12px;color:var(--warp);margin-left:6px}.checkmark::before{content:'✓'}
+.thing-photo{display:inline-flex;align-items:center;justify-content:center;gap:5px;vertical-align:middle;margin-left:7px;padding:4px 7px;font:inherit;font-size:10px;line-height:1.4;cursor:pointer;border:1px solid var(--line);border-radius:5px;background:transparent;color:var(--muted);transition:color .2s,border-color .2s,background .2s}
+.thing-photo svg{width:17px;height:17px;flex-shrink:0}
+.thing-photo:hover{border-color:var(--warp);color:var(--warp);background:var(--soft)}
+.thing-photo:hover svg{animation:camera-click .55s ease}
+.page-things button:focus-visible{outline:2px solid var(--warp);outline-offset:4px}
+.things-dialog{padding:22px;border:1px solid var(--line);border-radius:9px;background:var(--paper);color:var(--ink);width:min(900px,94vw);max-height:94vh}
+.things-dialog::backdrop{background:#000c;backdrop-filter:blur(5px)}
+.things-close{display:block;margin:0 0 15px auto;border:1px solid var(--line);border-radius:5px;background:transparent;color:var(--ink);padding:6px 12px;font:inherit;font-size:12px;cursor:pointer}
+.things-dialog img{max-height:70vh;width:100%;object-fit:contain}
+.things-dialog p{font-size:13px;color:var(--muted);text-align:center;line-height:1.7;margin:15px 0 0}
+.things-filter-status.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+@keyframes camera-click{40%{transform:scale(.85)}75%{transform:scale(1.1)}}
+@keyframes things-glimmer{50%{opacity:.55}}
+@media(max-width:560px){.things-list{columns:1}.things-list li{font-size:13px;padding-left:34px}.things-dialog{padding:15px}.things-progress-heading{align-items:center}.things-open-space{max-width:105px;text-align:right;line-height:1.6}.things-controls{gap:12px}.things-controls button{padding:8px 9px}.things-pick{padding:16px}.things-pick .things-pick-text{font-size:15px}.things-dots{gap:4px}}
+.things-list li[hidden],.things-controls[hidden],.things-pick[hidden]{display:none}
+@media(prefers-reduced-motion:reduce){.page-things *, .page-things *::before, .page-things *::after{animation:none!important;transition:none!important}}
+
+/* A glimpse of the actual memory, rather than a camera badge. */
+.things-list .thing-with-photo{padding-right:65px;min-height:65px}
+.thing-photo{position:absolute;right:8px;top:50%;transform:translateY(-50%);width:44px;height:36px;margin:0;padding:0;border:0;border-radius:4px;background:transparent;overflow:hidden;box-shadow:0 1px 4px #0003}
+.thing-photo img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .2s,filter .2s}
+.thing-photo:hover{background:transparent;outline:1px solid var(--warp);outline-offset:3px}
+.thing-photo:hover img{transform:scale(1.07);filter:brightness(1.08)}
+
+/* Compact icon-only photo controls. */
+.thing-photo{position:static;transform:none;vertical-align:middle;display:inline-flex;align-items:center;justify-content:center;width:27px;height:27px;margin-left:7px;padding:5px;border:0;border-radius:50%;box-shadow:none;color:var(--muted);overflow:visible;background:transparent}
+.thing-photo svg{width:17px;height:17px}
+.thing-photo:hover{color:var(--warp);background:var(--soft);outline:none}
+.things-photo-grid{display:grid;grid-template-columns:1fr;gap:18px;align-items:center}
+.things-dialog.has-paired-photos{width:min(1250px,96vw)}
+.has-paired-photos .things-photo-grid{grid-template-columns:1fr 1fr}
+.things-secondary-photo[hidden]{display:none}
+.has-paired-photos .things-photo-grid img{height:auto;max-height:70vh;object-fit:contain}
+@media(max-width:560px){.has-paired-photos .things-photo-grid{grid-template-columns:1fr}.has-paired-photos .things-photo-grid img{height:auto;max-height:34vh}}
+
+/* Consistent photo dimensions throughout the memory viewer. */
+.things-dialog .things-photo-grid img,
+.things-dialog.has-paired-photos .things-photo-grid img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;object-position:center;max-height:none;border-radius:3px}
+.things-dialog{max-height:94vh;overflow:auto}
+@media(max-width:560px){.things-dialog .things-photo-grid img,.things-dialog.has-paired-photos .things-photo-grid img{height:auto;max-height:none}}
+
+.thing-wip{display:inline-block;vertical-align:middle;margin-left:8px;padding:1px 6px;border:1px solid var(--line);border-radius:4px;color:var(--warp);font-size:9px;font-weight:600;line-height:1.7;letter-spacing:.6px;background:var(--tint-orange)}
+
+/* A single-photo memory must not display the unused second slot. */
+.things-dialog .things-photo-grid img[hidden]{display:none}
+
+.thing-aside{margin-left:8px;font-size:11px;color:var(--muted);font-style:italic;white-space:nowrap}
+
+.things-dots .is-wip{background:linear-gradient(to right,var(--warp) 0 50%,var(--line) 50% 100%)}
